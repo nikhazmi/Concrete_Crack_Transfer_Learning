@@ -41,3 +41,8 @@ This script provides a good starting point for using transfer learning to train 
 but it should be noted that the parameters and architectures used in this script may not be optimal for all datasets and use cases. 
 And depending on the size and complexity of your dataset and the power of your machine, you may need to adjust the parameters accordingly to avoid 
 overfitting or long training times.
+
+## Acknowledgment 
+We would like to acknowledge the use of the dataset provided by Mendeley Data in this project. The dataset contains a set of images of concrete cracks for classification. The availability of this dataset greatly helped in the development and evaluation of our image classification model. We express our gratitude to the creators of this dataset for making it publicly available and hope that it continues to be a valuable resource for the research community.
+
+https://data.mendeley.com/datasets/5y9wdsg2zt/2

@@ -22,13 +22,13 @@ The script is written for classifying concrete crack images, it's divided into s
 ## Documentation
 DATA DOCUMENTATION (Explanation for each number section)
 
-        1. Data Loading: This step is responsible for loading the image dataset from the specified directory. 
-           The dataset used in this code is the "Concrete Crack Images for Classification" dataset.
-        2. Defining the file path to the dataset: The code sets the file path variable to the location of the dataset on the local machine.
-        3. Prepared the data: This step is responsible for preparing the dataset for use in training the model. 
-           The code sets a seed value for reproducibility, and the image size is set to (160,160). 
-           The train and validation datasets are created using the 'tf.keras.utils.image_dataset_from_directory' function.
-        4. Create class names to display some images as examples: The class names for the dataset are created and used to 
+       1. Data Loading: This step is responsible for loading the image dataset from the specified directory. 
+          The dataset used in this code is the "Concrete Crack Images for Classification" dataset.
+       2. Defining the file path to the dataset: The code sets the file path variable to the location of the dataset on the local machine.
+       3. Prepared the data: This step is responsible for preparing the dataset for use in training the model. 
+          The code sets a seed value for reproducibility, and the image size is set to (160,160). 
+          The train and validation datasets are created using the 'tf.keras.utils.image_dataset_from_directory' function.
+       4. Create class names to display some images as examples: The class names for the dataset are created and used to 
           display a sample of images from the training dataset.
        5. Further split the validation dataset into validation-test split: This step splits the validation dataset into a 
           validation set and a test set. The validation set is used to evaluate the model during training, 

@@ -70,7 +70,9 @@ DATA DOCUMENTATION (Explanation for each number section)
               16.4 Plot Training, Validation Accuracy, Validation Loss: The accuracy and loss during training and validation is plotted in order to see how well the                      
               model was trained and its performance on the validation dataset.
        17. Show some predictions: A few predictions are made using the model and the images are displayed alongside their predicted labels.
-       18. Model Save: The final model is saved to a file so that it can be reused in the future without the need to retrain the model.
+       18. Model analysis using classfication report and confusion matrix
+              18.1 Display the report
+       19. Model Save: The final model is saved to a file so that it can be reused in the future without the need to retrain the model.
 
 This script provides a good starting point for using transfer learning to train a deep learning model for image classification, 
 but it should be noted that the parameters and architectures used in this script may not be optimal for all datasets and use cases. 
@@ -81,6 +83,13 @@ overfitting or long training times.
 
 ## Architecture of the model
 ![Architecture 1](https://user-images.githubusercontent.com/82282919/211738936-7a80d1e7-61aa-4354-a3db-b12ebaf5d202.png)
+
+## Prediction
+![Predictions](https://user-images.githubusercontent.com/82282919/211784568-5905bb6e-db28-4bf3-8416-f28b90b4d246.png)
+
+## Model Analysis
+![DIsplay Matrix](https://user-images.githubusercontent.com/82282919/211784476-3888d34e-e6e2-4e75-86e9-e47accc0c791.png)
+![Analysis](https://user-images.githubusercontent.com/82282919/211784525-6ab42b54-ea35-4f52-acc3-a72a199bd1ca.png)
 
 ## Acknowledgment 
 We would like to acknowledge the use of the dataset provided by Mendeley Data in this project. The dataset contains a set of images of concrete cracks for classification. The availability of this dataset greatly helped in the development and evaluation of our image classification model. We express our gratitude to the creators of this dataset for making it publicly available and hope that it continues to be a valuable resource for the research community.

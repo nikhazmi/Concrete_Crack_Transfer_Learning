@@ -44,6 +44,9 @@ overfitting or long training times.
 ## Graph
 ![Training vs Validation](https://user-images.githubusercontent.com/82282919/211732878-3d2ad857-62ee-496f-9fe9-80eb83ffde81.png)
 
+## Architecture of the model
+![Architecture 1](https://user-images.githubusercontent.com/82282919/211738936-7a80d1e7-61aa-4354-a3db-b12ebaf5d202.png)
+
 ## Acknowledgment 
 We would like to acknowledge the use of the dataset provided by Mendeley Data in this project. The dataset contains a set of images of concrete cracks for classification. The availability of this dataset greatly helped in the development and evaluation of our image classification model. We express our gratitude to the creators of this dataset for making it publicly available and hope that it continues to be a valuable resource for the research community.
 

@@ -23,11 +23,11 @@ The script is written for classifying concrete crack images, it's divided into s
 DATA DOCUMENTATION (Explanation for each number section)
 
        1. Data Loading: This step is responsible for loading the image dataset from the specified directory. 
-          The dataset used in this code is the "Concrete Crack Images for Classification" dataset.
+           The dataset used in this code is the "Concrete Crack Images for Classification" dataset.
        2. Defining the file path to the dataset: The code sets the file path variable to the location of the dataset on the local machine.
        3. Prepared the data: This step is responsible for preparing the dataset for use in training the model. 
-          The code sets a seed value for reproducibility, and the image size is set to (160,160). 
-          The train and validation datasets are created using the 'tf.keras.utils.image_dataset_from_directory' function.
+           The code sets a seed value for reproducibility, and the image size is set to (160,160). 
+           The train and validation datasets are created using the 'tf.keras.utils.image_dataset_from_directory' function.
        4. Create class names to display some images as examples: The class names for the dataset are created and used to 
           display a sample of images from the training dataset.
        5. Further split the validation dataset into validation-test split: This step splits the validation dataset into a 
@@ -40,17 +40,23 @@ DATA DOCUMENTATION (Explanation for each number section)
               7.1 Apply the data augmentaion to test it out: This step applies the data augmentation pipeline to a test image to check its effect.
                   Prepared the layer for preprocessing: This step prepares the layer for preprocessing input images before they are fed into the model.
        8. Prepared the layer for preprocessing: This step prepares the layer for preprocessing input images before they are fed into the model.
-       9. Apply transfer learning: This step involves using a pre-trained model, such as MobileNetV2, to extract features from the input images, and using these                 features as input to a new model that will be trained to classify the images.
+       9. Apply transfer learning: This step involves using a pre-trained model, such as MobileNetV2, to extract features from the input images, and using these                 
+       features as input to a new model that will be trained to classify the images.
               9.1 Disable the training for the feature extractor (freeze the layers): To improve the performance of the new model, 
-              it is important to prevent the pre-trained layers from being updated during training. This step is done by setting the trainable attribute of the pre-                 trained model to False.
+              it is important to prevent the pre-trained layers from being updated during training. This step is done by setting the trainable attribute of the pre-                 
+              trained model to False.
        10. Create the classification layers: A new set of layers is added to the model that will be used to classify the images based on the features 
            extracted by the pre-trained model. This step typically involves adding a GlobalAveragePooling2D layer and a Dense layer with a softmax activation function.
-       11. Use functional API to link all the modules together: The functional API is used to create the final model by linking the pre-trained model and the new                  classification layers together. The pre-trained model's output is used as input to the classification layers.
-       12. Compile the model and train: The model is compiled by defining the loss function, optimizer, and evaluation metric. Then, the model is trained by fitting              the training data to it.
+       11. Use functional API to link all the modules together: The functional API is used to create the final model by linking the pre-trained model and the new                  
+       classification layers together. The pre-trained model's output is used as input to the classification layers.
+       12. Compile the model and train: The model is compiled by defining the loss function, optimizer, and evaluation metric. Then, the model is trained by fitting              
+       the training data to it.
               12.1 Evaluate the model before model training: The model's performance is evaluated on the validation set before the training process.
-              12.2 Callback funtion: Additional callbacks can be defined, such as saving the model after each epoch or early stopping the training if there is no                          improvement in the validation set.
+              12.2 Callback funtion: Additional callbacks can be defined, such as saving the model after each epoch or early stopping the training if there is no                          
+              improvement in the validation set.
               12.3 Perform model training: The training is performed by fitting the data to the model.
-              12.4 Plot Training, Validation Accuracy, Validation Loss: The training and validation accuracy and loss are plotted over the training process to                            visualize the model's performance during training.
+              12.4 Plot Training, Validation Accuracy, Validation Loss: The training and validation accuracy and loss are plotted over the training process to                            
+              visualize the model's performance during training.
        13. Apply the next transfer learning strategy: The next strategy is applied by defining new configurations to the model such as unfreezing some layers, or
            adding more layers.
        14. Freeze the earlier layers: Freezing the earlier layers means making them non-trainable to preserve their learned weights.
@@ -61,9 +67,12 @@ DATA DOCUMENTATION (Explanation for each number section)
               16.1 Evaluating the model on the test dataset: The model is evaluated using the test dataset in order to get a sense of its generalization performance.
               16.2 Predict: The model is used to predict the class of new images by calling the predict function.
               16.3 Label VS Predict: The true labels of the images are compared with the predicted labels to measure the accuracy of the predictions.
-              16.4 Plot Training, Validation Accuracy, Validation Loss: The accuracy and loss during training and validation is plotted in order to see how well the                      model was trained and its performance on the validation dataset.
+              16.4 Plot Training, Validation Accuracy, Validation Loss: The accuracy and loss during training and validation is plotted in order to see how well the                      
+              model was trained and its performance on the validation dataset.
        17. Show some predictions: A few predictions are made using the model and the images are displayed alongside their predicted labels.
-       18. Model Save: The final model is saved to a file so that it can be reused in the future without the need to retrain the model.
+       18. Model analysis using classfication report and confusion matrix
+              18.1 Display the report
+       19. Model Save: The final model is saved to a file so that it can be reused in the future without the need to retrain the model.
 
 This script provides a good starting point for using transfer learning to train a deep learning model for image classification, 
 but it should be noted that the parameters and architectures used in this script may not be optimal for all datasets and use cases. 
@@ -74,6 +83,13 @@ overfitting or long training times.
 
 ## Architecture of the model
 ![Architecture 1](https://user-images.githubusercontent.com/82282919/211738936-7a80d1e7-61aa-4354-a3db-b12ebaf5d202.png)
+
+## Prediction
+![Predictions](https://user-images.githubusercontent.com/82282919/211784568-5905bb6e-db28-4bf3-8416-f28b90b4d246.png)
+
+## Model Analysis
+![DIsplay Matrix](https://user-images.githubusercontent.com/82282919/211784476-3888d34e-e6e2-4e75-86e9-e47accc0c791.png)
+![Analysis](https://user-images.githubusercontent.com/82282919/211784525-6ab42b54-ea35-4f52-acc3-a72a199bd1ca.png)
 
 ## Acknowledgment 
 We would like to acknowledge the use of the dataset provided by Mendeley Data in this project. The dataset contains a set of images of concrete cracks for classification. The availability of this dataset greatly helped in the development and evaluation of our image classification model. We express our gratitude to the creators of this dataset for making it publicly available and hope that it continues to be a valuable resource for the research community.

@@ -1,5 +1,5 @@
 # Concrete_Crack_Transfer_Learning
-Image detection using transfer learning
+Welcome to the Concrete_Crack_Transfer_Learning project! This project is a demonstration of how to use transfer learning to train a deep learning model for image classification using the Tensorflow library. The code is designed to classify images of concrete cracks, providing a binary classification between cracked and not cracked images.
 
 ## Badges
 

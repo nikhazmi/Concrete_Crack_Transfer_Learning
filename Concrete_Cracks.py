@@ -11,6 +11,9 @@ from tensorflow import keras
 from tensorflow.keras.utils import plot_model
 from tensorflow.keras import layers, optimizers, losses, callbacks, applications
 
+from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
+
+
 #%%
 """
     DATA DOCUMENTATION (Explanation for each number section)
@@ -63,12 +66,15 @@ from tensorflow.keras import layers, optimizers, losses, callbacks, applications
               16.4 Plot Training, Validation Accuracy, Validation Loss: The accuracy and loss during training and validation is plotted in order to see how well the                      
               model was trained and its performance on the validation dataset.
        17. Show some predictions: A few predictions are made using the model and the images are displayed alongside their predicted labels.
-       18. Model Save: The final model is saved to a file so that it can be reused in the future without the need to retrain the model.
+       18. Model analysis using classfication report and confusion matrix
+              18.1 Display the report
+       19. Model Save: The final model is saved to a file so that it can be reused in the future without the need to retrain the model.
        """
 
 #%%
 #1. Data Loading
 file_path = r"C:\Users\Nik Hazmi\Desktop\Concrete_Crack_Images\Datasets\Concrete Crack Images for Classification"
+
 #2. Defining the file path to the dataset
 data_dir = pathlib.Path(file_path)
 
@@ -268,6 +274,18 @@ for i in range(9):
     plt.title(class_names[predictions[i]])
     plt.axis("off")
 
+#%%
+#18. Model Analysis
+print(classification_report(label_batch, predictions))
+cm = confusion_matrix(label_batch, predictions)
+
+#%%
+#18.1 Display the reports
+disp= ConfusionMatrixDisplay(cm)
+disp.plot()
+
 # %%
-#18. Model Save
+#19. Model Save
 model.save('Models\model.h5')
+
+# %%
